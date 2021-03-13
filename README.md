@@ -1,6 +1,6 @@
 # Event
 
-Exact replicas of Roblox's event object.
+Exact replica of Roblox's event object.
 
 Usage:  
 
