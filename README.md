@@ -36,10 +36,10 @@ local function newEntity(name)
     Killed = Event.new();
    
     Attack = function(self, enemy)
-      enemy.Health = enemy.Health - (self.Attack / (100 - enemy.Armor))
+        enemy.Health = enemy.Health - (self.Attack / (100 - enemy.Armor))
     
         if enemy.Health =< 0 then
-            enemy.Killed:Invoke(self.Name)
+             enemy.Killed:Invoke(self.Name)
         end
     end
   }
