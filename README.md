@@ -16,7 +16,7 @@ EventObj:Wait()
 EventObj:Invoke()  
 `Invokes the event. All yielding threads will be released, and all callbacks connected will be fired. This method is synchonous.`  
 
-ConnectionObj:Disconnect() 
+ConnectionObj:Disconnect()  
 `Disconnects the connection.`  
 
 ***
