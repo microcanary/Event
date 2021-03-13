@@ -26,6 +26,8 @@ Event.new = function()
         end;
 
         Connect = function(self, f)
+            assert(type(f) == "function", "The callback provided is not a function.")
+            
             local Owner = self
             local Connected = f
 
