@@ -28,20 +28,20 @@ local Event = require(dir)
 
 local function newEntity(name)
   local Entity = {
-   Name = name;
-   Health = 100;
-   Armor = 10;
-   Attack = 10;
+    Name = name;
+    Health = 100;
+    Armor = 10;
+    Attack = 10;
    
-   Killed = Event.new();
+    Killed = Event.new();
    
-   Attack = function(self, enemy)
-   enemy.Health = enemy.Health - (self.Attack / (100 - enemy.Armor))
+    Attack = function(self, enemy)
+      enemy.Health = enemy.Health - (self.Attack / (100 - enemy.Armor))
     
-    if enemy.Health =< 0 then
-      enemy.Killed:Invoke(self.Name)
+        if enemy.Health =< 0 then
+            enemy.Killed:Invoke(self.Name)
+        end
     end
-   end
   }
 end
 
