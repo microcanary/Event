@@ -8,8 +8,8 @@ Event.new = function()
 
         Invoke = function(self, ...)
             
-            for i, v in ipairs(self.Queued) do
-                coroutine.resume(v)
+            for i = #self.Queued, 1, -1 do
+                coroutine.resume(self.Queued[i])
                 table.remove(self.Queued, i)
             end
 
