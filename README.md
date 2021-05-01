@@ -43,6 +43,8 @@ local function newEntity(name)
         end
     end
   }
+  
+  return Entity
 end
 
 local plr = newEntity("Joe")
